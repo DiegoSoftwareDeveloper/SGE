@@ -2,7 +2,6 @@
 Option Explicit On
 
 Imports SGE.Application.DTOs
-Imports SGE.Application.Services
 Imports SGE.Domain.Entities
 Imports SGE.Domain.Repositories
 

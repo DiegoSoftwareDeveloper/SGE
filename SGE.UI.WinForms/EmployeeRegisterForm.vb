@@ -34,22 +34,28 @@ Public Class EmployeeRegisterForm
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
-            Dim emp As New EmployeeDto With {
-                .FullName = txtFullName.Text,
-                .HireDate = dtpHireDate.Value,
-                .Position = txtPosition.Text,
-                .Salary = Decimal.Parse(txtSalary.Text),
-                .Department = txtDepartment.Text
-            }
-
             If _employeeId.HasValue Then
+                Dim emp As New EmployeeDto With {
+                    .Id = _employeeId.Value,
+                    .FullName = txtFullName.Text,
+                    .HireDate = dtpHireDate.Value,
+                    .Position = txtPosition.Text,
+                    .Salary = Decimal.Parse(txtSalary.Text),
+                    .Department = txtDepartment.Text
+                }
                 ' Editar
-                emp.Id = _employeeId.Value
                 _employeeService.UpdateEmployee(emp)
                 MessageBox.Show("Empleado actualizado correctamente.")
             Else
+                Dim newEmp As New CreateEmployeeDto With {
+                    .FullName = txtFullName.Text,
+                    .HireDate = dtpHireDate.Value,
+                    .Position = txtPosition.Text,
+                    .Salary = Decimal.Parse(txtSalary.Text),
+                    .Department = txtDepartment.Text
+                }
                 ' Nuevo
-                _employeeService.CreateEmployee(emp)
+                _employeeService.CreateEmployee(newEmp)
                 MessageBox.Show("Empleado creado correctamente.")
             End If
 
