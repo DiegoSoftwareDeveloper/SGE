@@ -21,7 +21,7 @@ Está diseñada con un enfoque modular y escalable, aplicando una Arquitectura e
 
 - **Patrón Arquitectónico:** Arquitectura en Capas con Inversión de Dependencias (DI/IoC)
 
-- **Contenedor de IoC:** Microsoft.Extensions.DependencyInjection (desde el paquete NuGet Microsoft.Extensions.DependencyInjection)
+- **Contenedor de IoC:** AutoFac
 
 - **Capas:**
     - **Dominio:** Entidades y contratos (Employee, IEmployeeRepository)
