@@ -25,7 +25,6 @@ Partial Class EmployeeRegisterForm
         Me.txtFullName = New System.Windows.Forms.TextBox()
         Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.txtSalary = New System.Windows.Forms.TextBox()
-        Me.txtDepartment = New System.Windows.Forms.TextBox()
         Me.dtpHireDate = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -34,6 +33,7 @@ Partial Class EmployeeRegisterForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.cbDepartment = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'txtFullName
@@ -56,13 +56,6 @@ Partial Class EmployeeRegisterForm
         Me.txtSalary.Name = "txtSalary"
         Me.txtSalary.Size = New System.Drawing.Size(206, 22)
         Me.txtSalary.TabIndex = 2
-        '
-        'txtDepartment
-        '
-        Me.txtDepartment.Location = New System.Drawing.Point(312, 229)
-        Me.txtDepartment.Name = "txtDepartment"
-        Me.txtDepartment.Size = New System.Drawing.Size(206, 22)
-        Me.txtDepartment.TabIndex = 3
         '
         'dtpHireDate
         '
@@ -144,12 +137,22 @@ Partial Class EmployeeRegisterForm
         Me.btnSave.Text = "Registrar"
         Me.btnSave.UseVisualStyleBackColor = False
         '
+        'cbDepartment
+        '
+        Me.cbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbDepartment.FormattingEnabled = True
+        Me.cbDepartment.Location = New System.Drawing.Point(312, 226)
+        Me.cbDepartment.Name = "cbDepartment"
+        Me.cbDepartment.Size = New System.Drawing.Size(206, 24)
+        Me.cbDepartment.TabIndex = 12
+        '
         'EmployeeRegisterForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.cbDepartment)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -158,7 +161,6 @@ Partial Class EmployeeRegisterForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dtpHireDate)
-        Me.Controls.Add(Me.txtDepartment)
         Me.Controls.Add(Me.txtSalary)
         Me.Controls.Add(Me.txtPosition)
         Me.Controls.Add(Me.txtFullName)
@@ -173,7 +175,6 @@ Partial Class EmployeeRegisterForm
     Friend WithEvents txtFullName As TextBox
     Friend WithEvents txtPosition As TextBox
     Friend WithEvents txtSalary As TextBox
-    Friend WithEvents txtDepartment As TextBox
     Friend WithEvents dtpHireDate As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -182,4 +183,5 @@ Partial Class EmployeeRegisterForm
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents btnSave As Button
+    Friend WithEvents cbDepartment As ComboBox
 End Class

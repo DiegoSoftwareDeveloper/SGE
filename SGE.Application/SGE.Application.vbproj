@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="Dtos\CreateEmployeeDto.vb" />
     <Compile Include="Dtos\EmployeeDto.vb" />
+    <Compile Include="Helpers\DepartamentHelper.vb" />
     <Compile Include="IoC\DependencyInjection.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
