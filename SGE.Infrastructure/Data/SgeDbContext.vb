@@ -9,17 +9,14 @@ Namespace SGE.Infrastructure.Data
         Inherits DbContext
 
         Public Sub New()
-            ' El nombre "SgeDbConnection" debe coincidir con la cadena en App.config
             MyBase.New("name=SgeDbConnection")
         End Sub
 
-        ' DbSet que representa la tabla Employees
         Public Property Employees As DbSet(Of Employee)
 
         Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
             MyBase.OnModelCreating(modelBuilder)
 
-            ' Configuración Fluent API (opcional)
             modelBuilder.Entity(Of Employee)() _
                 .ToTable("Employees") _
                 .HasKey(Function(e) e.Id)

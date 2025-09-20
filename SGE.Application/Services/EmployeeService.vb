@@ -20,7 +20,6 @@ Namespace SGE.Application.Services
 
         Private ReadOnly _repository As IEmployeeRepository
 
-        ' Constructor con inyección de dependencias
         Public Sub New(repository As IEmployeeRepository)
             _repository = repository
         End Sub
@@ -40,7 +39,6 @@ Namespace SGE.Application.Services
         End Function
 
         Public Sub CreateEmployee(employeeDto As CreateEmployeeDto) Implements IEmployeeService.CreateEmployee
-            ' Validaciones de negocio previas al guardado
             If String.IsNullOrWhiteSpace(employeeDto.FullName) Then
                 Throw New ArgumentException("El nombre del empleado es obligatorio.")
             End If

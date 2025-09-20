@@ -10,7 +10,6 @@ Namespace SGE.Domain.Entities
         Public Property Salary As Decimal
         Public Property Department As String
 
-        ' Constructor
         Public Sub New()
             ' Constructor vacío para Entity Framework
         End Sub
