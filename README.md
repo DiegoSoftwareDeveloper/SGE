@@ -46,8 +46,10 @@ La Presentación depende de la Aplicación. La Aplicación y la Infraestructura 
 SGE/
 ├── SGE.Application             # Lógica de aplicación (Capa de Casos de Uso)
 │   ├── Dtos/                   # Objetos de Transferencia de Datos (Data Transfer Objects)
-│   │   ├── CreateEmployeeDto.vb 
-│   │   └── EmployeeDto.vb       
+│   │   ├── CreateEmployeeDto.vb
+│   │   └── EmployeeDto.vb
+│   ├── Helpers/                   # Utilidades y validaciones auxiliares
+│   │   ├── DepartamentHelper.vb  ' Listado y validacion de departamentos
 │   ├── IoC/
 │   │   └── DependencyInjection.vb  ' Registro de servicios de aplicación (Interfaces de Servicios)
 │   └── Services/
